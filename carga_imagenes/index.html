@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/estilos.css" />
+    <title>Cargando Imagenes</title>
+  </head>
+  <body>
+    <header>
+      <h1>Practica para cargar imagenes a la base de datos con Express js !</h1>
+    </header>
+
+    <section>
+      <div class="form">
+        <form class="formulario" action="./carga_imagen" method="POST"  enctype="multipart/form-data">
+            
+          <label for="nombre">Nombre</label>
+          <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre" />
+
+          <label >Cargar Imagenen</label>
+          <input type="file" name="imagen" placeholder="Seleccionar"/>
+
+          <label for="msj">Dejar opinión</label>
+          <textarea id="msj" name="textarea" placeholder="Dejanos tu mensaje">
+            
+          </textarea>
+
+          <input type="submit" value="Enviar" class="btn-enviar" />
+        </form>
+      </div>
+    </section>
+  </body>
+</html>

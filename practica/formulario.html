@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/formulario.css" />
+    <title>Formulario !</title>
+  </head>
+  <body>
+    <div class="form">
+      <form action="./respuestadelformulario" method="POST" class="formulario">
+        <label for="nombre">Nombre</label>
+        <input
+          type="text"
+          id="nombre"
+          name="nombre"
+          placeholder="Escribe tu nombre"
+        />
+        <label for="apellido">Apellido</label>
+        <input
+          type="text"
+          name="apellido"
+          id=""
+          placeholder="Escribe tu apellido"
+        />
+
+        <label for="">Telefono</label>
+        <input
+          type="tel"
+          name="telefono"
+          placeholder="Ingresa tu telefono"
+          id=""
+        />
+
+        <label for="email">Email</label>
+        <input type="email" name="email" id="" placeholder="Escribe tu email" />
+
+        <label for="">Contraseña</label>
+        <input type="password" name="password" id="">
+
+        <textarea
+          name="textarea"
+          placeholder="Dejanos tu mensaje"
+          id=""
+        ></textarea>
+
+        <input type="submit" value="Enviar" class="btn-enviar" />
+      </form>
+    </div>
+  </body>
+</html>

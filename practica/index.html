@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/estilos.css" />
+    <link
+      rel="shortcut icon"
+      href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtb_9zVzsPWq_LDNDBVCsBYFo996KtVyCxWg&s"
+      type="image/x-icon"
+    />
+    <title>Practica en Express</title>
+  </head>
+  <body>
+    <header>
+      <h1>Hola mundo!</h1>
+    </header>
+
+    <div>
+      <form action="./datos" method="POST" class="formulario">
+        <label for="nombre">Nombre</label>
+        <input
+          type="text"
+          id="nombre"
+          name="nombre"
+          placeholder="Escribe tu nombre"
+        />
+        <label for="apellido">Apellido</label>
+        <input
+          type="text"
+          name="apellido"
+          id=""
+          placeholder="Escribe tu apellido"
+        />
+
+        <label for="email">Email</label>
+        <input type="email" name="email" id="" placeholder="Escribe tu email" />
+
+        <input type="submit" value="Enviar" class="btn-enviar" />
+      </form>
+
+      <div>
+        <a href="/formulario">Ir al Formulario</a>
+      </div>
+      <br><br>
+      <div>
+        <a href="/mostrando-datos">Ver los datos de la base de datos</a>
+      </div>
+    </div>
+  </body>
+</html>
