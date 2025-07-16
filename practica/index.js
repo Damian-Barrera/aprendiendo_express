@@ -199,6 +199,29 @@ app.get("/mostrando-datos", async (req, res) => {
   }
 });
 
+//Devolviendo un json
+
+app.get("/miapi", async (req,res) => {
+  const query = "SELECT * FROM usuarios";
+
+  try {
+      const connection = await mysql.createConnection(dbConfig);
+      const [rows] = await connection.execute(query);
+      connection.end();
+
+
+      res.json(rows)
+  } catch (error) {
+    console.log(error.message)
+  }
+
+})
+//Para ver los datos con el fetch
+
+app.get("/verdatos", (req,res) => {
+  res.sendFile("verDatos.html", {root: "."})
+})
+
 
 //Iniciando el servidor
 app.listen(PORT, () => {
