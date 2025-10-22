@@ -37,6 +37,23 @@ app.get("/", (req, res) => {
   res.sendFile("login.html", { root: "." });
 });
 
+// **middlewares** 
+function verificarLogin(req, res, next){
+  if( !req.session.user ) {
+    return res.redirect("/")
+  }
+  next()
+}
+// Este middleware no se ejecuta. Pero si hace la misma verificacion dentro de la peticin de la ruta nueva-pagina
+
+// function verificarAdmin(req, res, next) {
+//   if(!req.session.user || req.session.user.is_admin !==1) {
+//     return res.status(403).send("acceso denegado")
+//   }
+//   next();
+// }
+
+
 app.post("/login", (req, res) => {
   const { email, password } = req.body;
 
@@ -55,7 +72,6 @@ app.post("/login", (req, res) => {
         is_admin: results[0].is_admin,
       };
       res.send("Login correcto");
-
     } else {
       res.send("Usuario o contraseña incorrectos");
     }
@@ -77,15 +93,33 @@ app.get("/dashboard", (req, res) => {
   res.sendFile("dashboard_user.html", { root: "." });
 });
 
+
+ app.get("/nueva-pagina", verificarLogin, (req,res) => {
+  if( req.session.user.is_admin !== 1 ) {
+    res.sendFile("nueva-pagina-user-comun.html", {root: "."})
+  }
+  res.sendFile("nueva-pagina-admin.html", {root: "."})
+ })
+
+
+
 app.get("/logout", (req, res) => {
-  req.session.destroy(err => {
-    if(err) {
-      return res.send("error al cerrar la sesion")
+  req.session.destroy((err) => {
+    if (err) {
+      return res.send("error al cerrar la sesion");
     }
     res.redirect("/"); //vuelve al login
-  })
-})
+  });
+});
 
 app.listen(port, () => {
   console.log(`Servidor escuchando en el puerto ${port}`);
 });
+
+
+
+
+
+
+
+
