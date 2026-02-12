@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/estilos.css">
+    <title>Document</title>
+  </head>
+  <body>
+  
+    <%- include('header') %>
+
+    <h1>Bienvenido</h1>
+
+    <p>Total de usuarios: <%= datos.length %></p>
+    <!-- <ul>
+        <% datos.forEach(usuario => { %> 
+        <li>
+            <%= usuario.nombre %> 
+            <%= usuario.apellido %>
+            <%= usuario.direccion %>
+            <%= usuario.email %> 
+
+        </li>
+        <% }) %>
+    </ul>
+
+    <% if(mensaje){ %>    
+      <p>Mensaje de éxito: Datos cargados correctamente.</p>
+      <%} else { %>
+        <p>No hay mensaje para mostrar</p>
+        <% } %>  -->
+
+        <table>
+          <thead class="tablita">
+            <tr>
+              <th>Nombre</th>
+              <th>Apellido</th>
+              <th>Direccion</th>
+              <th>Email</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <% datos.forEach(dato => { %>
+                <td> <%= dato.nombre %> </td>
+                <td> <%= dato.apellido %> </td>
+                <td> <%= dato.direccion %> <td> 
+                <td> <%= dato.email %> <td>
+            </tr>
+            <% }) %>
+          </tbody>
+        </table>
+
+        
+        <% datos.forEach(dato => { %>
+    <ul>
+        <li>NOMBRE: <%= dato.nombre %> </li>
+        <li>APELLIDO: <%= dato.apellido %> </li>
+        <li>DIRECCION: <%= dato.direccion %> </li>
+        <li>EMAIL: <%= dato.email %> </li>
+
+      </ul>
+      <% }) %>
+
+        <a href="/formulario">Ir al formulario</a>
+  </body>
+</html>

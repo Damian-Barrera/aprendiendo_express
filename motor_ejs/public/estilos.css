@@ -1,0 +1,20 @@
+table {
+  border: 1px solid #ccc;
+  /* text-align: center; */
+}
+
+ 
+
+td {
+  border-bottom: 1px solid #5d5d5d;
+}
+table tbody tr td {
+  text-transform: capitalize;
+}
+
+table tbody tr:nth-child(odd) {
+  color: #fc8181;
+}
+table tbody tr:nth-child(even) {
+  color: #7784f8;
+}
