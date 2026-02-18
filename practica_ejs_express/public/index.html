@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="estilos.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <a href="/ingresar">Ingresar</a>
+    <section class="form-container">
+      <form action="/insert" method="POST" autocomplete="off">
+        <input type="text" name="nombre" id="" placeholder="Nombre" />
+        <input type="text" name="apellido" id="" placeholder="Apellido" />
+        <input type="text" name="telefono" id="" placeholder="Telefono" />
+       <label for="">
+        <input type="radio" name="sexo" Value="m">Masculino
+       </label>
+       <label for="">
+        <input type="radio" name="sexo" value="f">Femenino
+       </label>
+       <label for="">
+        <input type="radio" name="sexo" value="o" checked>Otro
+       </label>
+        <textarea
+          name="mensaje"
+          id=""
+          placeholder="Escriba su mensaje"
+        ></textarea>
+        <input type="password" name="password" id="" placeholder="Password" />
+        <button type="submit">Enviar</button>
+      </form>
+    </section>
+    <a href="/usuarios">Ir a la pagina de usuarios</a>  
+  </body>
+</html>

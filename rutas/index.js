@@ -1,5 +1,5 @@
 import express from 'express';
-import { Router } from 'express';
+// import { Router } from 'express';
 import usuariosRoutes from './routes/usuarios.js';
 import productosRoutes from './routes/productos.js';
 import lugaresRoutes from './routes/lugares.js';
@@ -7,7 +7,7 @@ import lugaresRoutes from './routes/lugares.js';
 const PORT = 3000;
 
 const app = express()
-const router = Router();
+// const router = Router();
 
 app.use(express.static('.'))
 
