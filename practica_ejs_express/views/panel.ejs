@@ -6,17 +6,21 @@
     <title>Panel de Usuario</title>
   </head>
   <body>
-   <% let saludo;
-    if(user.genero ==="m"){
-      saludo = "Bienvenido";
-    }else if(user.genero ==="f"){
-      saludo = "Bienvenida";
-    }else {
-      saludo = " Bienvenide"
-    }
+    <!-- Todo esto estaba cuando no habia sesiones.  -->
+     <%= console.log(user.genero)%>
+     <% let saludo;
+      if(user.genero === "m"){
+        saludo = "Bienvenido" ; 
+      }
+        if(user.genero === "f"){
+          saludo = "welcome" ; 
+        }
+        if(user.genero === "o"){
+          saludo = "salute" ; 
+        }
+       
      %>
   <h1 style="text-transform: capitalize;">  <%= saludo + " "+  user.nombre %>  </h1>
-  <p> <%= user.is_admin ? "Eres administrador" : "No eres administrador" %> </p>
- </body>
-
+  <p> <%= user.is_admin ? "Eres administrador" : "No eres administrador" %> </p> 
+  </body>
 </html>

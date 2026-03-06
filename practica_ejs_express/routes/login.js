@@ -23,8 +23,12 @@ router.post("/", async (req, res) => {
     if(!passValida) {
         return res.render("ingresar", { error: "Contraseña incorrecta" });
     }
+
+    req.session.usuario = user;
+
     //Login correcto
-    res.render("panel", { user });
+    // res.render("panel", { user }); //Esto se usaba asi cuando no habia sesiones, ahora se redirige a panel y se obtiene el usuario desde la sesión
+    res.redirect("/panel");
 
   } catch (error) {
     res.status(500).send("Error al ingresar");

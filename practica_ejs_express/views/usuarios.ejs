@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/estilos.css">
+    <title>Usuarios</title>
+</head>
+<body>
+    <h1>Esta es la pagina de usuarios ! </h1>
+
+    <ul>
+         <% usuarios.forEach(user => { %>
+            <li> <%= ` ${user.nombre} - ${user.apellido} - ${user.telefono} - ${user.genero} - ${user.mensaje} -` %> <strong>   <%= user.link %> </strong>  </li>
+            <% }) %>
+    </ul>
+    
+    <section class="card-container">
+        <%  usuarios.forEach(user => { %>
+             <img  src=" <%= user.link %> "   alt="foto">
+
+        <%  }) %> 
+    </section>
+ </body>
+</html>

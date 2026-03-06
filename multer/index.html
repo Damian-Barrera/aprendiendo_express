@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Usando Multer</title>
+  </head>
+  <body>
+    <form
+      action="/subir"
+      method="POST"
+      enctype="multipart/form-data"
+      style="
+        width: 300px;
+        margin: 50px auto;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        font-family: Arial;
+        text-align: center;
+        background: #f9f9f9;
+      "
+    >
+      <h3 style="margin-bottom: 20px">Subir archivo</h3>
+
+      <input type="file" name="archivo" style="margin-bottom: 15px" />
+
+      <br />
+
+      <button
+        type="submit"
+        style="
+          padding: 8px 15px;
+          border: none;
+          background: #2b7cff;
+          color: white;
+          border-radius: 4px;
+          cursor: pointer;
+        "
+      >
+        Subir
+      </button>
+    </form>
+  </body>
+</html>

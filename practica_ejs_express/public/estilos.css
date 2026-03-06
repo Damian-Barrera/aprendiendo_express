@@ -3,9 +3,14 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
 }
-body{
+body {
   padding: 10px;
 }
 .form-container {
@@ -16,7 +21,7 @@ body{
   display: flex;
   justify-content: center;
   align-items: center;
-  }
+}
 
 /* Contenedor del formulario */
 form {
@@ -38,7 +43,9 @@ form textarea {
   border: 1px solid #dcdfe6;
   border-radius: 6px;
   font-size: 14px;
-  transition: border 0.2s ease, box-shadow 0.2s ease;
+  transition:
+    border 0.2s ease,
+    box-shadow 0.2s ease;
   outline: none;
 }
 
@@ -65,7 +72,9 @@ form button {
   font-size: 15px;
   font-weight: 600;
   cursor: pointer;
-  transition: background 0.2s ease, transform 0.1s ease;
+  transition:
+    background 0.2s ease,
+    transform 0.1s ease;
 }
 
 /* Hover botón */
@@ -77,3 +86,17 @@ form button:hover {
 form button:active {
   transform: scale(0.98);
 }
+
+.card-container {
+  border: 1px solid red;
+  width: 90%;
+  height: 500px;
+  margin: auto;
+  padding: 20px;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: nowrap;   
+}
+
+ 
