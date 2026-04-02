@@ -4,15 +4,22 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="estilos.css" />
-    <title>Document</title>
+    <title>Practica de ejs y express</title>
   </head>
   <body>
-    <a href="/ingresar">Ingresar</a>
-    <br><br>
-    <a href="/usuarios">Ir a la pagina de usuarios</a>  
+    <header>
+      <h1>Bienvenidos a mi pagina</h1>
+    </header>
+    <section class="links">
+      <a href="/ingresar">Ingresar</a>
+      <br><br>
+      <a href="/usuarios">Ir a la pagina de usuarios</a>  
+
+    </section>
 
     <section class="form-container">
       <form action="/insert" method="POST" autocomplete="off">
+        <h2>Registrarse</h2>
         <input type="text" name="nombre" id="" placeholder="Nombre" />
         <input type="text" name="apellido" id="" placeholder="Apellido" />
         <input type="text" name="link" id="" placeholder="Ingrese link">
